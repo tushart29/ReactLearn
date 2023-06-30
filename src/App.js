@@ -1,13 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Main from './components/Main'
+import Sidebar from './components/Sidebar'
+import "./index.css"
 
+// in this example, app component is the parent component. header, main, sidebar is the child component. this parent has passed
+// data to the other 3 files.
 
-function Header() {
-  return <h1>Hello World</h1>
-}
 function App() {
-  // renders the header component 
-  return <Header />
+  return (
+    <div className='App'>
+      <Header name="Anna" color="purple" />
+      <div>
+        <Main greet="Howdy" />
+        <Sidebar greet="Hi" />
+      </div>
+
+    </div>
+  )
 }
 
 export default App;
